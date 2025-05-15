@@ -103,33 +103,63 @@
     </nav>
 
     <div class="container">
-
         <section id="monday" class="day-section">
             <h2 class="day-title">Monday - Biceps</h2>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div class="col">
                     <div class="exercise-card card h-100">
-                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Barbell+Curl" class="card-img-top" alt="Barbell Curl">
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Curl.gif" class="card-img-top" alt="Barbell Curl" style="height: 200px; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Barbell Curl</h5>
                             <p class="card-text">10 reps x 4 sets</p>
-                            <div class="video-embed-container mt-auto">
-                                <iframe src="https://www.youtube.com/embed/QZEqB6wUPxQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#barbellCurlModal">
+                                Show Video
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="exercise-card card h-100">
-                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Dumbbell+Curl" class="card-img-top" alt="Dumbbell Curl">
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Curl.gif" class="card-img-top" alt="Dumbbell Curl"  style="height: 200px; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Dumbbell Curl</h5>
                             <p class="card-text">20 reps x 4 sets</p>
-                            <div class="video-embed-container mt-auto">
-                                <iframe src="https://www.youtube.com/embed/yTWO2th-RIY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                             <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#dumbbellCurlModal">
+                                Show Video
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modals -->
+                <div class="modal fade" id="barbellCurlModal" tabindex="-1" aria-labelledby="barbellCurlModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="barbellCurlModalLabel">Barbell Curl Video</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            <div class="modal-body">
+                                <div class="video-embed-container">
+                                    <iframe src="https://www.youtube.com/embed/QZEqB6wUPxQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="dumbbellCurlModal" tabindex="-1" aria-labelledby="dumbbellCurlModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="dumbbellCurlModalLabel">Dumbbell Curl Video</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="video-embed-container">
+                                    <iframe src="https://www.youtube.com/embed/yTWO2th-RIY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -142,7 +172,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/fIWP-FRFNU0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -155,7 +185,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/zC3nLlEvin4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -168,7 +198,7 @@
                              <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/ypfd1kaI1AU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -187,7 +217,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/2-LAMcpzODU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -200,7 +230,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/kZ-ReOdn2qk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -213,7 +243,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/QXzhjRnYRT0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -226,7 +256,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/1u18yJELsh0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -237,9 +267,9 @@
                             <h5 class="card-title">Close Grip Dumbbell Press (Hammer Grip)</h5>
                             <p class="card-text">10kg x 12 reps x 4 sets</p>
                             <div class="video-embed-container mt-auto">
-                                <iframe src="https://www.youtube.com/embed/yik5q3XTh2A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/sq29JjFWMMk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -258,7 +288,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/IODxDxX7oi4" title="YouTube video player for Pushups" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
-                             <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                             
                         </div>
                     </div>
                 </div>
@@ -271,7 +301,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/rT7DgCr-3pg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -284,7 +314,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/SrqOu55lrYU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -297,7 +327,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/VmB1G1K7v94" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -310,7 +340,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/8iPEnn-ltC8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -323,7 +353,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/Z57CtFmRMxA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -342,7 +372,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/lueEJGjTuPQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -355,7 +385,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/Rx_UHBuqN7Y" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -368,7 +398,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/GZbfZ033f74" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -381,7 +411,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/pYcpY20QaE8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -394,7 +424,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/sP_4vybjVJs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -413,7 +443,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/qEwKCR5JCog" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -426,7 +456,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/mdej2f2ctL4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -439,7 +469,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/b_q1c3xH11Q" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -452,7 +482,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/sWkSsVeiI8U" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -465,7 +495,7 @@
                             <div class="video-embed-container mt-auto">
                                 <iframe src="https://www.youtube.com/embed/3VcKaXpzqRo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                            
                         </div>
                     </div>
                 </div>
