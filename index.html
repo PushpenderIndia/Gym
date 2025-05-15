@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Routine</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .exercise-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .exercise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .day-header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .muscle-group {
+            font-weight: bold;
+            color: #6e8efb;
+        }
+        .download-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .video-btn {
+            background-color: #ff0000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Weekly Workout Routine</h1>
+        
+        <!-- Monday - Biceps -->
+        <div class="day-header">
+            <h2>Monday - <span class="muscle-group">Biceps</span></h2>
+        </div>
+        <div class="row">
+            <!-- Barbell Curl -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/barbell-curl-header-830x467.jpg" class="card-img-top" alt="Barbell Curl">
+                    <div class="card-body">
+                        <h5 class="card-title">Barbell Curl</h5>
+                        <p class="card-text">10 reps x 4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=kwG2ipFRgfo" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=1example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dumbbell Curl -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/dumbbell-curl-header-830x467.jpg" class="card-img-top" alt="Dumbbell Curl">
+                    <div class="card-body">
+                        <h5 class="card-title">Dumbbell Curl</h5>
+                        <p class="card-text">20 reps x 4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=ykJmrZ5v0Oo" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=2example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Preacher Curl -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/preacher-curl-header-830x467.jpg" class="card-img-top" alt="Preacher Curl">
+                    <div class="card-body">
+                        <h5 class="card-title">Preacher Curl</h5>
+                        <p class="card-text">10 reps x 4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=fIWP-FRFNU0" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=3example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hammer Curl -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/hammer-curl-header-830x467.jpg" class="card-img-top" alt="Hammer Curl">
+                    <div class="card-body">
+                        <h5 class="card-title">Hammer Curl</h5>
+                        <p class="card-text">10 reps x 4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=TwD-YGVP4Bk" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=4example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Reverse Forearm -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/reverse-curl-header-830x467.jpg" class="card-img-top" alt="Reverse Forearm Curl">
+                    <div class="card-body">
+                        <h5 class="card-title">Reverse Forearm Curl</h5>
+                        <p class="card-text">5kg x 4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=nRgxYX2Ve9w" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=5example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tuesday - Triceps -->
+        <div class="day-header mt-5">
+            <h2>Tuesday - <span class="muscle-group">Triceps</span></h2>
+        </div>
+        <div class="row">
+            <!-- Cable Push Down -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/triceps-pushdown-header-830x467.jpg" class="card-img-top" alt="Cable Push Down">
+                    <div class="card-body">
+                        <h5 class="card-title">Cable Push Down</h5>
+                        <p class="card-text">15kg x 15 reps x 4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=2-LAMcpzODU" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=6example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seated Single Arm Triceps Extension -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/overhead-triceps-extension-header-830x467.jpg" class="card-img-top" alt="Seated Single Arm Triceps Extension">
+                    <div class="card-body">
+                        <h5 class="card-title">Seated Single Arm Triceps Extension</h5>
+                        <p class="card-text">5kg x 12 reps x 4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=-Vyt2QdsR7E" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=7example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skull Crushers -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/skullcrusher-header-830x467.jpg" class="card-img-top" alt="Skull Crushers">
+                    <div class="card-body">
+                        <h5 class="card-title">Skull Crushers</h5>
+                        <p class="card-text">10 reps x 4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=d_KZxkY_0cM" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=8example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Overhead Triceps Extension -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/overhead-triceps-extension-header-830x467.jpg" class="card-img-top" alt="Overhead Triceps Extension">
+                    <div class="card-body">
+                        <h5 class="card-title">Overhead Triceps Extension</h5>
+                        <p class="card-text">7.5kg x 12 reps x 4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=-Vyt2QdsR7E" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=9example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hammer -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/triceps-dip-header-830x467.jpg" class="card-img-top" alt="Triceps Dip">
+                    <div class="card-body">
+                        <h5 class="card-title">Triceps Dip</h5>
+                        <p class="card-text">10kg x 12 reps x 4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=0326dy_-CzM" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=10example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wednesday - Chest -->
+        <div class="day-header mt-5">
+            <h2>Wednesday - <span class="muscle-group">Chest</span></h2>
+        </div>
+        <div class="row">
+            <!-- Pushups -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/push-up-header-830x467.jpg" class="card-img-top" alt="Pushups">
+                    <div class="card-body">
+                        <h5 class="card-title">Pushups</h5>
+                        <p class="card-text">4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=IODxDxX7oi4" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=11example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dips -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/chest-dip-header-830x467.jpg" class="card-img-top" alt="Dips">
+                    <div class="card-body">
+                        <h5 class="card-title">Dips</h5>
+                        <p class="card-text">4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=2z8JmcrW-As" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=12example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chest Press -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/chest-press-header-830x467.jpg" class="card-img-top" alt="Chest Press">
+                    <div class="card-body">
+                        <h5 class="card-title">Chest Press</h5>
+                        <p class="card-text">4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=VM4uP-92bU0" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=13example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Inclined Chest Press -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/incline-chest-press-header-830x467.jpg" class="card-img-top" alt="Inclined Chest Press">
+                    <div class="card-body">
+                        <h5 class="card-title">Inclined Chest Press</h5>
+                        <p class="card-text">4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=0G2_XV7slIg" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=14example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dumbbell Chest Press -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/dumbbell-chest-press-header-830x467.jpg" class="card-img-top" alt="Dumbbell Chest Press">
+                    <div class="card-body">
+                        <h5 class="card-title">Dumbbell Chest Press</h5>
+                        <p class="card-text">4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=VmB1G1K7v94" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=15example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Inclined Dumbbell Chess Press -->
+            <div class="col-md-4">
+                <div class="card exercise-card">
+                    <img src="https://www.bodybuilding.com/images/2021/april/incline-dumbbell-press-header-830x467.jpg" class="card-img-top" alt="Inclined Dumbbell Chess Press">
+                    <div class="card-body">
+                        <h5 class="card-title">Inclined Dumbbell Chess Press</h5>
+                        <p class="card-text">4 sets</p>
+                        <a href="https://www.youtube.com/watch?v=8iPEnn-ltC8" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
+                        <a href="https://drive.google.com/uc?export=download&id=16example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
+            
