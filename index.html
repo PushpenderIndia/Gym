@@ -108,7 +108,7 @@
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div class="col">
                     <div class="exercise-card card h-100">
-                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Curl.gif" class="card-img-top" alt="Barbell Curl" style="height: 200px; object-fit: cover;">
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Curl.gif" class="card-img-top" alt="Barbell Curl" style="height: 100%; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Barbell Curl</h5>
                             <p class="card-text">10 reps x 4 sets</p>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="col">
                     <div class="exercise-card card h-100">
-                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Curl.gif" class="card-img-top" alt="Dumbbell Curl"  style="height: 200px; object-fit: cover;">
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Curl.gif" class="card-img-top" alt="Dumbbell Curl"  style="height: 100%; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Dumbbell Curl</h5>
                             <p class="card-text">20 reps x 4 sets</p>
@@ -163,42 +163,40 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col">
                     <div class="exercise-card card h-100">
-                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Preacher+Curl" class="card-img-top" alt="Preacher Curl">
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/04/Lever-Preacher-Curl.gif" class="card-img-top" alt="Preacher Curl"  style="height: 100%; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Preacher Curl</h5>
                             <p class="card-text">10 reps x 4 sets</p>
-                            <div class="video-embed-container mt-auto">
-                                <iframe src="https://www.youtube.com/embed/fIWP-FRFNU0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            
+                             <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#preacherCurlModal">
+                                Show Video
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="exercise-card card h-100">
-                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Hammer+Curl" class="card-img-top" alt="Hammer Curl">
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif" class="card-img-top" alt="Hammer Curl"  style="height: 100%; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Hammer Curl</h5>
                             <p class="card-text">10 reps x 4 sets</p>
-                            <div class="video-embed-container mt-auto">
-                                <iframe src="https://www.youtube.com/embed/zC3nLlEvin4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            
+                             <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#hammerCurlModal">
+                                Show Video
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="exercise-card card h-100">
-                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Reverse+Forearm+Curl" class="card-img-top" alt="Reverse Forearm Curl">
+                        <img src="https://fitnessprogramer.com/wp-content/uploads/2021/04/dumbbell-reverse-curl.gif" class="card-img-top" alt="Reverse Forearm Curl"  style="height: 100%; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Reverse Forearm Curl</h5>
                             <p class="card-text">5kg</p>
-                             <div class="video-embed-container mt-auto">
-                                <iframe src="https://www.youtube.com/embed/ypfd1kaI1AU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            
+                             <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#reverseForearmCurlModal">
+                                Show Video
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -501,6 +499,55 @@
                 </div>
             </div>
         </section>
+
+        <!-- Modals -->
+        <div class="modal fade" id="preacherCurlModal" tabindex="-1" aria-labelledby="preacherCurlModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="preacherCurlModalLabel">Preacher Curl Video</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="video-embed-container">
+                            <iframe src="https://www.youtube.com/embed/fIWP-FRFNU0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="hammerCurlModal" tabindex="-1" aria-labelledby="hammerCurlModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="hammerCurlModalLabel">Hammer Curl Video</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="video-embed-container">
+                            <iframe src="https://www.youtube.com/embed/zC3nLlEvin4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="reverseForearmCurlModal" tabindex="-1" aria-labelledby="reverseForearmCurlModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="reverseForearmCurlModalLabel">Reverse Forearm Curl Video</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="video-embed-container">
+                            <iframe src="https://www.youtube.com/embed/ypfd1kaI1AU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div> <footer class="footer">
         <div class="container">
