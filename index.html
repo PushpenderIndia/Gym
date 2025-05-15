@@ -3,271 +3,481 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workout Routine</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Weekly Workout Plan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter font as per general guidelines */
+            background-color: #f8f9fa; /* Light gray background */
+        }
+        .navbar {
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #0d6efd; /* Blue accent for navbar */
+        }
+        .day-section {
+            background-color: #ffffff; /* White background for day sections */
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 0.5rem; /* Rounded corners for sections */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+        }
+        .day-title {
+            color: #0d6efd; /* Blue title for days */
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
         .exercise-card {
-            transition: transform 0.3s;
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #dee2e6; /* Light border for cards */
+            border-radius: 0.375rem; /* Bootstrap's default card border-radius */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
         .exercise-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
         }
-        .day-header {
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
+        .exercise-card img {
+            width: 100%;
+            height: 200px; /* Fixed height for images */
+            object-fit: cover; /* Ensure image covers the area well */
+            border-top-left-radius: 0.375rem;
+            border-top-right-radius: 0.375rem;
         }
-        .muscle-group {
+        .exercise-card .card-body {
+            padding: 1.25rem;
+        }
+        .exercise-card .card-title {
             font-weight: bold;
-            color: #6e8efb;
+            color: #343a40; /* Darker text for titles */
         }
-        .download-btn {
-            background-color: #28a745;
-            color: white;
+        .video-embed-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            margin-bottom: 1rem;
+            border-radius: 0.25rem;
         }
-        .video-btn {
-            background-color: #ff0000;
+        .video-embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .btn-custom {
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem; /* Space out buttons if they wrap */
+        }
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #343a40; /* Dark footer */
             color: white;
+            margin-top: 2rem;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .exercise-card img {
+                height: 150px; /* Smaller image height on smaller screens */
+            }
+            .day-title {
+                font-size: 1.75rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container py-5">
-        <h1 class="text-center mb-5">Weekly Workout Routine</h1>
-        
-        <!-- Monday - Biceps -->
-        <div class="day-header">
-            <h2>Monday - <span class="muscle-group">Biceps</span></h2>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-dumbbell"></i> Workout Planner
+            </a>
         </div>
-        <div class="row">
-            <!-- Barbell Curl -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/barbell-curl-header-830x467.jpg" class="card-img-top" alt="Barbell Curl">
-                    <div class="card-body">
-                        <h5 class="card-title">Barbell Curl</h5>
-                        <p class="card-text">10 reps x 4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=kwG2ipFRgfo" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=1example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="monday" class="day-section">
+            <h2 class="day-title">Monday - Biceps</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Barbell+Curl" class="card-img-top" alt="Barbell Curl">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Barbell Curl</h5>
+                            <p class="card-text">10 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/kwG2Zqt10-Y" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Dumbbell+Curl" class="card-img-top" alt="Dumbbell Curl">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Dumbbell Curl</h5>
+                            <p class="card-text">20 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/yTWO2th-RIY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Preacher+Curl" class="card-img-top" alt="Preacher Curl">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Preacher Curl</h5>
+                            <p class="card-text">10 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/fIWP-FRFNU0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Hammer+Curl" class="card-img-top" alt="Hammer Curl">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Hammer Curl</h5>
+                            <p class="card-text">10 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/zC3nLlEvin4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Reverse+Forearm+Curl" class="card-img-top" alt="Reverse Forearm Curl">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Reverse Forearm Curl</h5>
+                            <p class="card-text">5kg</p>
+                             <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/nRgxY7pA3uB" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Dumbbell Curl -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/dumbbell-curl-header-830x467.jpg" class="card-img-top" alt="Dumbbell Curl">
-                    <div class="card-body">
-                        <h5 class="card-title">Dumbbell Curl</h5>
-                        <p class="card-text">20 reps x 4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=ykJmrZ5v0Oo" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=2example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+        </section>
+
+        <section id="tuesday" class="day-section">
+            <h2 class="day-title">Tuesday - Triceps</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Cable+Push+Down" class="card-img-top" alt="Cable Push Down">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Cable Push Down</h5>
+                            <p class="card-text">15kg x 15 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/2-LAMcpzODU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Seated+Single+Arm+Triceps+Ext" class="card-img-top" alt="Seated Single Arm Triceps Extension">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Seated Single Arm Triceps Extension</h5>
+                            <p class="card-text">5kg x 12 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/nF353MQ6ncY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Skullcrushers" class="card-img-top" alt="Skullcrushers">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Skullcrushers</h5>
+                            <p class="card-text">10 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/NIWKqR3UBh" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Overhead+Triceps+Extension" class="card-img-top" alt="Overhead Triceps Extension">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Overhead Triceps Extension</h5>
+                            <p class="card-text">7.5kg x 12 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/3DOT_gJuN1U" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Triceps+Hammer+Press" class="card-img-top" alt="Triceps Hammer Press">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Close Grip Dumbbell Press (Hammer Grip)</h5>
+                            <p class="card-text">10kg x 12 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/yik5q3XTh2A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Preacher Curl -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/preacher-curl-header-830x467.jpg" class="card-img-top" alt="Preacher Curl">
-                    <div class="card-body">
-                        <h5 class="card-title">Preacher Curl</h5>
-                        <p class="card-text">10 reps x 4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=fIWP-FRFNU0" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=3example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+        </section>
+
+        <section id="wednesday" class="day-section">
+            <h2 class="day-title">Wednesday - Chest</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Pushups+Dips" class="card-img-top" alt="Pushups and Dips">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pushups & Dips</h5>
+                            <p class="card-text">4 Sets (reps as per capacity)</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/IODxDxX7oi4" title="YouTube video player for Pushups" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                             <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Barbell+Bench+Press" class="card-img-top" alt="Barbell Bench Press">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Chest Press (Barbell Bench)</h5>
+                            <p class="card-text">Specify sets/reps</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/rT7DgCr-3pg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Incline+Barbell+Press" class="card-img-top" alt="Incline Barbell Press">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Inclined Chest Press (Barbell)</h5>
+                            <p class="card-text">Specify sets/reps</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/SrqOu55lrYU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Dumbbell+Chest+Press" class="card-img-top" alt="Dumbbell Chest Press">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Dumbbell Chest Press</h5>
+                            <p class="card-text">Specify sets/reps</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/VmB1G1K7v94" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Incline+Dumbbell+Press" class="card-img-top" alt="Incline Dumbbell Press">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Inclined Dumbbell Chest Press</h5>
+                            <p class="card-text">Specify sets/reps</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/8iPEnn-ltC8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Butterfly+Pec+Deck" class="card-img-top" alt="Butterfly">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Butterfly (Pec Deck / Dumbbell Fly)</h5>
+                            <p class="card-text">Specify sets/reps</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/Z57CtFmRMxA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Hammer Curl -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/hammer-curl-header-830x467.jpg" class="card-img-top" alt="Hammer Curl">
-                    <div class="card-body">
-                        <h5 class="card-title">Hammer Curl</h5>
-                        <p class="card-text">10 reps x 4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=TwD-YGVP4Bk" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=4example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+        </section>
+
+        <section id="thursday" class="day-section">
+            <h2 class="day-title">Thursday - Back</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Lat+Pull+Down" class="card-img-top" alt="Lat Pull Down">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Lat Pull Down</h5>
+                            <p class="card-text">40kg x 12 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/lueEJGjTuPQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Behind+Neck+Lat+Pull+Down" class="card-img-top" alt="Back Lat Pull Down">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Back Lat Pull Down (Behind Neck)</h5>
+                            <p class="card-text">30kg x 12 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/Rx_UHBuqN7Y" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Seated+Cable+Rows" class="card-img-top" alt="Seated Cable Rows">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Seated Cable Rows</h5>
+                            <p class="card-text">60kg x 10 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/GZbfZ033f74" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Dumbbell+Rows" class="card-img-top" alt="Dumbbell Rows">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Dumbbell Rows (Single Arm)</h5>
+                            <p class="card-text">15kg x 10 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/pYcpY20QaE8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Landmine+Row" class="card-img-top" alt="Landmine Row">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Landmine Row</h5>
+                            <p class="card-text">30kg x 10 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/sP_4vybjVJs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Reverse Forearm -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/reverse-curl-header-830x467.jpg" class="card-img-top" alt="Reverse Forearm Curl">
-                    <div class="card-body">
-                        <h5 class="card-title">Reverse Forearm Curl</h5>
-                        <p class="card-text">5kg x 4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=nRgxYX2Ve9w" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=5example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
+        </section>
+
+        <section id="friday" class="day-section">
+            <h2 class="day-title">Friday - Shoulders</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Seated+Barbell+Shoulder+Press" class="card-img-top" alt="Seated Barbell Shoulder Press">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Seated Barbell Shoulder Press</h5>
+                            <p class="card-text">10 reps x 4 sets (5ft Rod)</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/qEwKCR5JCog" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Behind+Neck+Shoulder+Press" class="card-img-top" alt="Seated Behind the Neck Shoulder Press">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Seated Behind the Neck Shoulder Press</h5>
+                            <p class="card-text">10 reps x 4 sets (5ft Rod)</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/mdej2f2ctL4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Seated+Dumbbell+Press" class="card-img-top" alt="Seated Dumbbell Press">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Seated Dumbbell Press</h5>
+                            <p class="card-text">10 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/b_q1c3xH11Q" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=DB+One+Arm+Front+Raise" class="card-img-top" alt="Dumbbell One Arm Front Raise">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Dumbbell One Arm Front Raise</h5>
+                            <p class="card-text">20 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/sWkSsVeiI8U" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="exercise-card card h-100">
+                        <img src="https://placehold.co/600x400/EBF4FA/000000?text=Dumbbell+Side+Raises" class="card-img-top" alt="Dumbbell Side Raises">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Dumbbell Side Raises (Lateral Raises)</h5>
+                            <p class="card-text">10 reps x 4 sets</p>
+                            <div class="video-embed-container mt-auto">
+                                <iframe src="https://www.youtube.com/embed/3VcKaXpzqRo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm mt-2 btn-custom" target="_blank"><i class="fas fa-download"></i> Download Info</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+    </div> <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Your Workout Plan. Stay Fit!</p>
         </div>
-        
-        <!-- Tuesday - Triceps -->
-        <div class="day-header mt-5">
-            <h2>Tuesday - <span class="muscle-group">Triceps</span></h2>
-        </div>
-        <div class="row">
-            <!-- Cable Push Down -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/triceps-pushdown-header-830x467.jpg" class="card-img-top" alt="Cable Push Down">
-                    <div class="card-body">
-                        <h5 class="card-title">Cable Push Down</h5>
-                        <p class="card-text">15kg x 15 reps x 4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=2-LAMcpzODU" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=6example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Seated Single Arm Triceps Extension -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/overhead-triceps-extension-header-830x467.jpg" class="card-img-top" alt="Seated Single Arm Triceps Extension">
-                    <div class="card-body">
-                        <h5 class="card-title">Seated Single Arm Triceps Extension</h5>
-                        <p class="card-text">5kg x 12 reps x 4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=-Vyt2QdsR7E" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=7example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Skull Crushers -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/skullcrusher-header-830x467.jpg" class="card-img-top" alt="Skull Crushers">
-                    <div class="card-body">
-                        <h5 class="card-title">Skull Crushers</h5>
-                        <p class="card-text">10 reps x 4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=d_KZxkY_0cM" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=8example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Overhead Triceps Extension -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/overhead-triceps-extension-header-830x467.jpg" class="card-img-top" alt="Overhead Triceps Extension">
-                    <div class="card-body">
-                        <h5 class="card-title">Overhead Triceps Extension</h5>
-                        <p class="card-text">7.5kg x 12 reps x 4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=-Vyt2QdsR7E" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=9example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hammer -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/triceps-dip-header-830x467.jpg" class="card-img-top" alt="Triceps Dip">
-                    <div class="card-body">
-                        <h5 class="card-title">Triceps Dip</h5>
-                        <p class="card-text">10kg x 12 reps x 4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=0326dy_-CzM" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=10example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Wednesday - Chest -->
-        <div class="day-header mt-5">
-            <h2>Wednesday - <span class="muscle-group">Chest</span></h2>
-        </div>
-        <div class="row">
-            <!-- Pushups -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/push-up-header-830x467.jpg" class="card-img-top" alt="Pushups">
-                    <div class="card-body">
-                        <h5 class="card-title">Pushups</h5>
-                        <p class="card-text">4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=IODxDxX7oi4" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=11example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Dips -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/chest-dip-header-830x467.jpg" class="card-img-top" alt="Dips">
-                    <div class="card-body">
-                        <h5 class="card-title">Dips</h5>
-                        <p class="card-text">4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=2z8JmcrW-As" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=12example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Chest Press -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/chest-press-header-830x467.jpg" class="card-img-top" alt="Chest Press">
-                    <div class="card-body">
-                        <h5 class="card-title">Chest Press</h5>
-                        <p class="card-text">4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=VM4uP-92bU0" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=13example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Inclined Chest Press -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/incline-chest-press-header-830x467.jpg" class="card-img-top" alt="Inclined Chest Press">
-                    <div class="card-body">
-                        <h5 class="card-title">Inclined Chest Press</h5>
-                        <p class="card-text">4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=0G2_XV7slIg" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=14example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Dumbbell Chest Press -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/dumbbell-chest-press-header-830x467.jpg" class="card-img-top" alt="Dumbbell Chest Press">
-                    <div class="card-body">
-                        <h5 class="card-title">Dumbbell Chest Press</h5>
-                        <p class="card-text">4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=VmB1G1K7v94" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=15example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Inclined Dumbbell Chess Press -->
-            <div class="col-md-4">
-                <div class="card exercise-card">
-                    <img src="https://www.bodybuilding.com/images/2021/april/incline-dumbbell-press-header-830x467.jpg" class="card-img-top" alt="Inclined Dumbbell Chess Press">
-                    <div class="card-body">
-                        <h5 class="card-title">Inclined Dumbbell Chess Press</h5>
-                        <p class="card-text">4 sets</p>
-                        <a href="https://www.youtube.com/watch?v=8iPEnn-ltC8" class="btn btn-sm video-btn me-2" target="_blank"><i class="fas fa-play"></i> Watch Video</a>
-                        <a href="https://drive.google.com/uc?export=download&id=16example" class="btn btn-sm download-btn"><i class="fas fa-download"></i> Download Guide</a>
-                    </div>
-                </div>
-            </div>
-          </div>
-    </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
-            
